@@ -12,21 +12,17 @@ Daissi Bibiana Gonzalez Roldan
   ```sh
   → git clone
   ```
-2. **Build the Dockerfile**
-  ```sh
-  → docker-compose build
-  ```
 
-3. **If there were no errors in the previous step**
+2. **If there were no errors in the previous step**
   ```sh
   → docker-compose up
   ```
 
-4. **Enter the web page, on the routes:**
+3. **Enter the web page, on the routes:**
 
-[127.0.0.1:4000](http://127.0.0.1:3000 "Link a Pagina")
+[127.0.0.1:80](http://127.0.0.1 "Link a Pagina")
 
-[localhost:4000](http://localhost:3000/ "Link a Pagina")
+[localhost:80](http://localhost "Link a Pagina")
 
 ### Documentation
 Here you will find the documentation of all end points:
@@ -44,15 +40,14 @@ If you want to run the tests located within a certain script, you can run the co
 ```
 
 ### Recommendations
-* Recuerda que como usuario predeterminado puedes ingresar con los siguientes datos:
-```json
-{
-    "email": "user@example.com",
-    "password": "secure"
-}
-```
+*  If you want to install the project with a different configuration, remember to modify the environment variables in your **.env** file, following the example represented in  **.env.example**
 
-* Si desea hacer la instalacion del proyecto con una configuracion distinta, recuerde modificar las variables de entorno en su archivo **.env**,  siguiendo el ejemplo representado en **.env.example**
+* In the same way, if you want to manually configure your database, initially you can execute the following commands in your *PostgreSQL* database, remembering to do the modification of the respective environment variables in the same way:
+~~~~sql
+CREATE DATABASE db_name;
+CREATE USER user_name with ENCRYPTED PASSWORD 'paswword';
+GRANT ALL PRIVILEGES ON database db_name TO user_name;
+~~~~
 
 ### License
 MIT License
